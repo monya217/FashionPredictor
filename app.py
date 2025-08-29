@@ -6,7 +6,7 @@ import numpy as np
 import uvicorn
 
 # Load trained model
-model = load_model("fashion_cnn.h5")
+model = load_model("fashion_cnn_model.keras")
 
 # Class names (Fashion MNIST)
 class_names = ["T-shirt/top", "Trouser", "Pullover", "Dress", "Coat",
@@ -36,3 +36,4 @@ async def predict(file: UploadFile = File(...)):
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
